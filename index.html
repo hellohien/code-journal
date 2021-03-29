@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Code Journal</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Proza+Libre:wght@400;600&display=swap" rel="stylesheet">
   <link rel="icon" href="images/favicon.ico">
   <link
     rel="stylesheet"
@@ -16,30 +18,42 @@
 </head>
 <body>
   <header>
+    <div class="container">
+      <a src="" class="column-full logo">Code Journal</a>
+    </div>
   </header>
   <main>
     <div class="container" data-view="entry-form">
-      <h1>New Entry</h1>
+      <h1 class="column-full new-entry">New Entry</h1>
       <form action="">
        <div class="row">
-          <img class="column-half" src="images/placeholder-image-square.jpg" alt="Journal Entry Image">
+         <div class="column-half">
+            <img class="entry-image" src="images/placeholder-image-square.jpg" alt="Journal Entry Image">
+         </div>
           <div class="column-half">
-            <label for="title">Title</label>
-            <div>
-              <input id="title" type="text">
+            <div class="title-container">
+              <label for="title">Title</label>
+              <div>
+                <input id="title" type="text">
+              </div>
             </div>
-            <label for="photo-url">Photo URL</label>
-            <div>
-              <input id="photo-url" type="text">
+            <div class="photo-url-container">
+              <label for="photo-url">Photo URL</label>
+              <div>
+                <input id="photo-url" type="text">
+              </div>
             </div>
           </div>
        </div>
-        <div class="column-full">
-          <label for="notes">Notes</label>
-          <div>
-            <textarea id="notes"></textarea>
-          </div>
+      <div class="column-full notes-container">
+        <label for="notes">Notes</label>
+        <div>
+          <textarea id="notes"></textarea>
         </div>
+      </div>
+      <div class="column-full save-button-container">
+        <button class="save-button">Save</button>
+      </div>
       </form>
     </div>
   </main>
