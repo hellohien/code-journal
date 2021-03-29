@@ -18,6 +18,30 @@
   <header>
   </header>
   <main>
+    <div class="container" data-view="entry-form">
+      <h1>New Entry</h1>
+      <form action="">
+       <div class="row">
+          <img class="column-half" src="images/placeholder-image-square.jpg" alt="Journal Entry Image">
+          <div class="column-half">
+            <label for="title">Title</label>
+            <div>
+              <input id="title" type="text">
+            </div>
+            <label for="photo-url">Photo URL</label>
+            <div>
+              <input id="photo-url" type="text">
+            </div>
+          </div>
+       </div>
+        <div class="column-full">
+          <label for="notes">Notes</label>
+          <div>
+            <textarea id="notes"></textarea>
+          </div>
+        </div>
+      </form>
+    </div>
   </main>
   <script src="js/data.js"></script>
   <script src="js/main.js"></script>
