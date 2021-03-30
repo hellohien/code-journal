@@ -1,6 +1,5 @@
 * {
   font-family: 'Proza Libre', sans-serif;
-  font-size: 1rem;
 }
 
 header,
@@ -23,7 +22,7 @@ header {
   font-weight: 400;
 }
 
-.new-entry {
+.new-entry-heading {
   font-size: 1.8rem;
 }
 
@@ -33,8 +32,9 @@ header {
 #title,
 #photo-url,
 #notes,
-.entry-image {
+.preview-image {
   width: 100%;
+  border-radius: 4px;
 }
 
 label {
@@ -46,28 +46,29 @@ label {
 #photo-url,
 #notes {
   margin-top: 0.3rem;
+  padding: 0.4rem;
   outline-color: #4a2473;
 }
 
-.entry-image {
+.preview-image {
   object-fit: cover;
-  height: 340px;
+  height: 310px;
 }
 
 #title,
 #photo-url {
-  height: 30px;
+  height: 32px;
 }
 
 #notes {
-  height: 130px;
+  height: 140px;
 }
 
 .title-container,
 .photo-url-container,
-.entry-image,
+.preview-image,
 .notes-container {
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.1rem;
 }
 
 .save-button-container {
