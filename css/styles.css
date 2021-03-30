@@ -1,0 +1,86 @@
+* {
+  font-family: 'Proza Libre', sans-serif;
+}
+
+header,
+.save-button {
+  background-color: #4a2473;
+}
+
+header {
+  padding: 0.8rem 0;
+}
+
+.logo,
+.save-button {
+  color: rgb(245, 245, 245);
+}
+
+.logo {
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.new-entry-heading {
+  font-size: 1.8rem;
+}
+
+.image-container,
+.title-container,
+.photo-container,
+#title,
+#photo-url,
+#notes,
+.preview-image {
+  width: 100%;
+  border-radius: 4px;
+}
+
+label {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+#title,
+#photo-url,
+#notes {
+  margin-top: 0.3rem;
+  padding: 0.4rem;
+  outline-color: #4a2473;
+}
+
+.preview-image {
+  object-fit: cover;
+  height: 310px;
+}
+
+#title,
+#photo-url {
+  height: 32px;
+}
+
+#notes {
+  height: 140px;
+}
+
+.title-container,
+.photo-url-container,
+.preview-image,
+.notes-container {
+  margin-bottom: 1.1rem;
+}
+
+.save-button-container {
+  text-align: end;
+}
+
+.save-button {
+  font-size: 0.9rem;
+  padding: 0.3rem 1.2rem;
+  border-radius: 4px;
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
