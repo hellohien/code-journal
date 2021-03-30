@@ -1,7 +1,6 @@
 /* exported data */
 var $form = document.getElementById('form');
 var $photoUrl = document.getElementById('photo-url');
-var $entryImage = document.querySelector('.entry-image');
 var $title = document.getElementById('title');
 var $notes = document.getElementById('notes');
 
@@ -27,7 +26,6 @@ function addEntry(event) {
 
   data.nextEntryId++;
   data.entries.unshift(entries);
-  $entryImage.src = 'images/placeholder-image-square.jpg';
   $form.reset();
 
   var dataJSON = JSON.stringify(data);
