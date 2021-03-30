@@ -1,10 +1,10 @@
 /* global data */
 /* exported data */
-var $photoUrlInput = document.getElementById('photo-url');
+var $photoUrl = document.getElementById('photo-url');
 var $entryImage = document.querySelector('.entry-image');
 
 function updateEntryImage() {
-  $entryImage.src = $photoUrlInput.value;
+  $entryImage.src = $photoUrl.value;
 }
 
-$photoUrlInput.addEventListener('input', updateEntryImage);
+$photoUrl.addEventListener('input', updateEntryImage);
