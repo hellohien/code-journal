@@ -3,7 +3,7 @@
 }
 
 header,
-.save-button {
+button {
   background-color: #4a2473;
 }
 
@@ -12,7 +12,7 @@ header {
 }
 
 .logo,
-.save-button {
+button {
   color: rgb(245, 245, 245);
 }
 
@@ -22,7 +22,7 @@ header {
   font-weight: 400;
 }
 
-.new-entry-heading {
+.entry-heading {
   font-size: 1.8rem;
 }
 
@@ -50,7 +50,7 @@ label {
   outline-color: #4a2473;
 }
 
-.preview-image {
+img {
   object-fit: cover;
   height: 310px;
 }
@@ -75,12 +75,36 @@ label {
   text-align: end;
 }
 
-.save-button {
+button {
   font-size: 0.9rem;
-  padding: 0.3rem 1.2rem;
+  padding: 0.6rem 1.2rem;
+  width: 72px;
+  height: 38px;
   border-radius: 4px;
   text-transform: uppercase;
   border: none;
   outline: none;
   cursor: pointer;
+}
+
+ul {
+  padding: 0;
+}
+
+.entry-list h2 {
+  margin: 0;
+}
+
+.entry-list img,
+.entry-list h2,
+.entry-list p {
+  margin: 0 0 1.5rem;
+}
+
+.entry-list p {
+  line-height: 1.6rem;
+}
+
+.no-entries-found {
+  text-align: center;
 }
