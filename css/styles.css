@@ -108,20 +108,15 @@ ul {
   padding: 0;
 }
 
-.entry-list h2 {
-  margin: 0;
+li {
+  margin-bottom: 3rem;
 }
 
-.entry-list img,
-.entry-list h2,
-.entry-list p {
-  margin: 0 0 1.5rem;
+.entry-list h2 {
+  margin: 1.4rem 0;
 }
 
 .entry-list p {
   line-height: 1.6rem;
-}
-
-.no-entries-found {
-  text-align: center;
+  margin: 0;
 }
