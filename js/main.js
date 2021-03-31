@@ -5,6 +5,9 @@ var $previewImage = document.querySelector('.preview-image');
 var $form = document.getElementById('form');
 var $title = document.getElementById('title');
 var $notes = document.getElementById('notes');
+var $entriesList = document.querySelector('.entries-list');
+var $newEntryBtn = document.querySelector('.new-entry-button');
+var $entryFormContainer = document.querySelector('.entry-form-container');
 var $entriesContainer = document.querySelector('.entries-container');
 
 function updateEntryImage() {
@@ -50,9 +53,15 @@ function entryList(entryObj) {
 }
 
 for (var i = 0; i < data.entries.length; i++) {
-  $entriesContainer.appendChild(entryList(data.entries[i]));
+  $entriesList.appendChild(entryList(data.entries[i]));
+}
+
+function showEntryForm(event) {
+  $entryFormContainer.classList.remove('hidden');
+  $entriesContainer.classList.add('hidden');
 }
 
 $photoUrl.addEventListener('input', updateEntryImage);
 $form.addEventListener('submit', addEntry);
-$entriesContainer.addEventListener('DOMContentLoaded', entryList);
+$entriesList.addEventListener('DOMContentLoaded', entryList);
+$newEntryBtn.addEventListener('click', showEntryForm);

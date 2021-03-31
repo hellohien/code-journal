@@ -24,7 +24,7 @@
     </div>
   </header>
   <main>
-    <div class="container" data-view="entry-form">
+    <div class="container entry-form-container hidden" data-view="entry-form">
       <h1 class="column-full entry-heading">New Entry</h1>
       <form id="form" action="">
         <div class="row">
@@ -58,13 +58,13 @@
       </form>
     </div>
 
-    <div class="container" data-view="entries">
+    <div class="container entries-container" data-view="entries">
       <div class="column-full row-mobile">
         <h1 class="entry-heading">Entries</h1>
-        <button>New</button>
+        <button class="new-entry-button">New</button>
       </div>
       <p class="no-entries-found"></p>
-      <ul class="entries-container">
+      <ul class="entries-list">
       </ul>
     </div>
   </main>

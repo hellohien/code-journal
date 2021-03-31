@@ -6,6 +6,10 @@ body {
   background-color: rgb(245, 245, 245);
 }
 
+.hidden {
+  display: none;
+}
+
 header,
 button {
   background-color: #4a2473;
@@ -120,5 +124,4 @@ ul {
 
 .no-entries-found {
   text-align: center;
-}
 }
