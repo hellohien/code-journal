@@ -24,7 +24,7 @@ function addEntry(event) {
 
   data.nextEntryId++;
   data.entries.unshift(entries);
-  $form.reset();
+  $entriesList.append($form);
 }
 
 function entryList(entryObj) {
