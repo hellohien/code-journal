@@ -2,6 +2,10 @@
   font-family: 'Proza Libre', sans-serif;
 }
 
+body {
+  background-color: rgb(245, 245, 245);
+}
+
 header,
 button {
   background-color: #4a2473;
@@ -47,6 +51,7 @@ label {
 #notes {
   margin-top: 0.3rem;
   padding: 0.4rem;
+  border: 1.5px solid rgb(182, 182, 182);
   outline-color: #4a2473;
 }
 
