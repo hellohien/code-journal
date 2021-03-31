@@ -20,13 +20,13 @@
   <header>
     <div class="container">
       <a href="" class="column-full logo">Code Journal</a>
-      <a href="" class="column-full link">Entries</a>
+      <a class="column-full entries-link" data-view="entry-form">Entries</a>
     </div>
   </header>
   <main>
-    <div class="container entry-form-container hidden" data-view="entry-form">
+    <div class="container hidden" data-view="entry-form">
       <h1 class="column-full entry-heading">New Entry</h1>
-      <form id="form" action="">
+      <form id="form" data-view="entry-form" action="">
         <div class="row">
           <div class="column-half">
             <img class="preview-image" src="images/placeholder-image-square.jpg" alt="Journal Entry Image">
@@ -53,15 +53,15 @@
           </div>
         </div>
         <div class="column-full save-button-container">
-          <button class="save-button">Save</button>
+          <button class="save-button" data-view="entry-form">Save</button>
         </div>
       </form>
     </div>
 
-    <div class="container entries-container" data-view="entries">
+    <div class="container" data-view="entries">
       <div class="column-full row-mobile">
         <h1 class="entry-heading">Entries</h1>
-        <button class="new-entry-button">New</button>
+        <button class="new-entry-button" data-view="entries">New</button>
       </div>
       <ul class="entries-list">
       </ul>

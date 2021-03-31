@@ -7,23 +7,27 @@ var $title = document.getElementById('title');
 var $notes = document.getElementById('notes');
 var $entriesList = document.querySelector('.entries-list');
 var $newEntryBtn = document.querySelector('.new-entry-button');
-var $entryFormContainer = document.querySelector('.entry-form-container');
-var $entriesContainer = document.querySelector('.entries-container');
+var $containers = document.querySelectorAll('.container');
+var $entriesLink = document.querySelector('.entries-link');
 
 function updateEntryImage() {
   $previewImage.src = $photoUrl.value;
 }
 
 function addEntry(event) {
+  event.preventDefault();
   var entries = {
     title: $title.value,
     photoURL: $photoUrl.value,
     notes: $notes.value,
     entryId: data.nextEntryId
   };
-
   data.nextEntryId++;
   data.entries.unshift(entries);
+  $previewImage.src = 'images/placeholder-image-square.jpg';
+  $form.reset();
+  $entriesList.prepend(entryList(entries));
+  changeView();
 }
 
 function entryList(entryObj) {
@@ -55,12 +59,19 @@ for (var i = 0; i < data.entries.length; i++) {
   $entriesList.appendChild(entryList(data.entries[i]));
 }
 
-function showEntryForm(event) {
-  $entryFormContainer.classList.remove('hidden');
-  $entriesContainer.classList.add('hidden');
+function changeView(view) {
+  for (var index = 0; index < $containers.length; index++) {
+    var dataView = event.target.getAttribute('data-view');
+    if ($containers[index].dataset.view === dataView) {
+      $containers[index].className = 'container hidden';
+    } else {
+      $containers[index].className = 'container';
+    }
+  }
 }
 
 $photoUrl.addEventListener('input', updateEntryImage);
 $form.addEventListener('submit', addEntry);
 $entriesList.addEventListener('DOMContentLoaded', entryList);
-$newEntryBtn.addEventListener('click', showEntryForm);
+$newEntryBtn.addEventListener('click', changeView);
+$entriesLink.addEventListener('click', changeView);

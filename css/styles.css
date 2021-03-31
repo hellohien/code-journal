@@ -33,9 +33,10 @@ a {
   font-weight: 400;
 }
 
-.link {
+.entries-link {
   font-size: 1rem;
   padding: 0 0.5rem;
+  cursor: pointer;
 }
 
 .entry-heading {
