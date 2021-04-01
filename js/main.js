@@ -27,7 +27,7 @@ function addEntry(event) {
   $previewImage.src = 'images/placeholder-image-square.jpg';
   $form.reset();
   $entriesList.prepend(entryList(entries));
-  changeView();
+  getDataValue('entries');
 }
 
 function entryList(entryObj) {
@@ -61,8 +61,7 @@ for (var i = 0; i < data.entries.length; i++) {
 
 function changeView(view) {
   for (var index = 0; index < $containers.length; index++) {
-    var dataView = event.target.getAttribute('data-view');
-    if ($containers[index].dataset.view === dataView) {
+    if ($containers[index].dataset.view === view) {
       $containers[index].className = 'container hidden';
     } else {
       $containers[index].className = 'container';
@@ -70,8 +69,13 @@ function changeView(view) {
   }
 }
 
+function getDataValue(view) {
+  var dataView = event.target.getAttribute('data-view');
+  changeView(dataView);
+}
+
 $photoUrl.addEventListener('input', updateEntryImage);
 $form.addEventListener('submit', addEntry);
 $entriesList.addEventListener('DOMContentLoaded', entryList);
-$newEntryBtn.addEventListener('click', changeView);
-$entriesLink.addEventListener('click', changeView);
+$newEntryBtn.addEventListener('click', getDataValue);
+$entriesLink.addEventListener('click', getDataValue);
