@@ -27,7 +27,7 @@ function addEntry(event) {
   $previewImage.src = 'images/placeholder-image-square.jpg';
   $form.reset();
   $entriesList.prepend(entryList(entries));
-  getDataValue('entries');
+  changeView('entry-form');
 }
 
 function entryList(entryObj) {
@@ -69,7 +69,7 @@ function changeView(view) {
   }
 }
 
-function getDataValue(view) {
+function getDataValue() {
   var dataView = event.target.getAttribute('data-view');
   changeView(dataView);
 }
