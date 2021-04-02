@@ -7,7 +7,7 @@ var $title = document.getElementById('title');
 var $notes = document.getElementById('notes');
 var $entriesList = document.querySelector('.entries-list');
 var $newEntryBtn = document.querySelector('.new-entry-button');
-var $containers = document.querySelectorAll('.container');
+var $containers = document.querySelectorAll('.container-view');
 var $entriesLink = document.querySelector('.entries-link');
 
 function updateEntryImage() {
@@ -27,7 +27,7 @@ function addEntry(event) {
   $previewImage.src = 'images/placeholder-image-square.jpg';
   $form.reset();
   $entriesList.prepend(entryList(entries));
-  changeView('entry-form');
+  changeView('entries');
 }
 
 function entryList(entryObj) {
@@ -62,9 +62,9 @@ for (var i = 0; i < data.entries.length; i++) {
 function changeView(view) {
   for (var index = 0; index < $containers.length; index++) {
     if ($containers[index].dataset.view === view) {
-      $containers[index].className = 'container hidden';
+      $containers[index].className = 'container container-view';
     } else {
-      $containers[index].className = 'container';
+      $containers[index].className = 'container container-view hidden';
     }
   }
 }
