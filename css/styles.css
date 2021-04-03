@@ -2,8 +2,12 @@
   font-family: 'Proza Libre', sans-serif;
 }
 
+body {
+  background-color: rgb(245, 245, 245);
+}
+
 header,
-.save-button {
+button {
   background-color: #4a2473;
 }
 
@@ -11,18 +15,27 @@ header {
   padding: 0.8rem 0;
 }
 
-.logo,
-.save-button {
+a,
+button {
   color: rgb(245, 245, 245);
 }
 
-.logo {
+a {
   text-decoration: none;
+}
+
+.logo {
   font-size: 1.2rem;
   font-weight: 400;
 }
 
-.new-entry-heading {
+.entries-link {
+  font-size: 1rem;
+  padding: 0 0.5rem;
+  cursor: pointer;
+}
+
+.entry-heading {
   font-size: 1.8rem;
 }
 
@@ -47,10 +60,11 @@ label {
 #notes {
   margin-top: 0.3rem;
   padding: 0.4rem;
+  border: 1.5px solid rgb(182, 182, 182);
   outline-color: #4a2473;
 }
 
-.preview-image {
+img {
   object-fit: cover;
   height: 310px;
 }
@@ -75,12 +89,31 @@ label {
   text-align: end;
 }
 
-.save-button {
+button {
   font-size: 0.9rem;
-  padding: 0.3rem 1.2rem;
+  padding: 0.6rem 1.2rem;
+  width: 72px;
+  height: 38px;
   border-radius: 4px;
   text-transform: uppercase;
   border: none;
   outline: none;
   cursor: pointer;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  margin-bottom: 3rem;
+}
+
+.entry-list h2 {
+  margin: 1.4rem 0;
+}
+
+.entry-list p {
+  line-height: 1.6rem;
+  margin: 0;
 }
